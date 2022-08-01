@@ -1,0 +1,4 @@
+name: HelloPaper
+version: '${version}'
+main: me.diligord.hellopaper.HelloPaper
+api-version: 1.19
