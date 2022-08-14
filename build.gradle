@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = 'me.diligord'
@@ -14,7 +15,7 @@ repositories {
     }
     maven {
         name = 'sonatype'
-        url = 'https://oss.sonatype.org/content/groups/public/'
+        url = 'https://oss.so1natype.org/content/groups/public/'
     }
 }
 

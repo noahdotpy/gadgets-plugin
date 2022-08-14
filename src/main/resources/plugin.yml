@@ -1,4 +1,11 @@
-name: HelloPaper
+name: Gadgets
 version: '${version}'
-main: me.diligord.hellopaper.HelloPaper
+main: me.diligord.gadgets.Gadgets
 api-version: 1.19
+commands:
+  grapplebow:
+    description: Gives a golf club.
+    usage: /<command>
+  glide:
+    description: Enables gliding (elytra-like) mode.
+    usage: /<command>
