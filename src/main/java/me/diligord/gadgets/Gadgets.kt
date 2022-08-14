@@ -1,9 +1,9 @@
 package me.diligord.gadgets
 
+import me.diligord.gadgets.commands.GiveGrappleBowCommand
+import me.diligord.gadgets.commands.GlideCommand
 import me.diligord.gadgets.handlers.glideHandlers.EntityToggleGlideHandler
 import me.diligord.gadgets.handlers.grappleBowListeners.*
-import me.diligord.gadgets.commands.GlideCommand
-import me.diligord.gadgets.commands.GiveGolfClubCommand
 import org.bukkit.plugin.java.JavaPlugin
 
 
@@ -11,10 +11,10 @@ class Gadgets : JavaPlugin() {
 
     override fun onEnable() {
 
-        getConfig().options().copyDefaults()
+        config.options().copyDefaults()
         saveDefaultConfig()
 
-        if (config.getBoolean("Glide") == true) {
+        if (config.getBoolean("Glide")) {
             // Commands
             getCommand("glide")?.setExecutor(GlideCommand())
 
@@ -22,9 +22,9 @@ class Gadgets : JavaPlugin() {
             EntityToggleGlideHandler(this)
         }
 
-        if (config.getBoolean("GolfClub") == true) {
+        if (config.getBoolean("GrappleBow")) {
             // Commands
-            getCommand("grapplebow")?.setExecutor(GiveGolfClubCommand())
+            getCommand("grapplebow")?.setExecutor(GiveGrappleBowCommand())
 
             // Handlers
             PlayerActionListener(this)

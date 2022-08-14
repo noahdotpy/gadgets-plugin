@@ -14,7 +14,7 @@ import java.util.UUID
 const val COOLDOWN_TIME = 10000L // In milliseconds
 
 
-class GiveGolfClubCommand(private val cooldownMap: HashMap<UUID, Long> = HashMap()): CommandExecutor {
+class GiveGrappleBowCommand(private val cooldownMap: HashMap<UUID, Long> = HashMap()): CommandExecutor {
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
