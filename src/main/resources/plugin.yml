@@ -9,3 +9,12 @@ commands:
   glide:
     description: Enables gliding (elytra-like) mode.
     usage: /<command>
+#permissions:
+#  gadgets.*:
+#
+#  gadgets.evadeCommandCooldown:
+#
+#  gadgets.glideCommand:
+#
+#  gadgets.grappleBow.evadeMovementRestrictions:
+

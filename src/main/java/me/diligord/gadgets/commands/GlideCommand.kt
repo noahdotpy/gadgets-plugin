@@ -15,8 +15,8 @@ class GlideCommand: CommandExecutor {
             return false
         }
 
-        if (!sender.hasPermission("gadgets.giveGolfClubCommand")) {
-            sender.sendMessage("${ChatColor.RED}You do not have permission to execute this command.")
+        if (!sender.hasPermission("gadgets.glideCommand")) {
+            sender.sendMessage(Bukkit.permissionMessage())
             return true
         }
 

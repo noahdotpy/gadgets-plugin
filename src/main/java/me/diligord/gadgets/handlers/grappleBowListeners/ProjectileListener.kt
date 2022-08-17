@@ -24,6 +24,8 @@ class ProjectileListener(private val plugin: Gadgets): Listener {
 
         val entity = e.entity
         val player = e.entity.shooter as Player
+        val velocityMultiplier = plugin.config.getDouble("grappleBow.velocityMultiplier")
+        entity.velocity = entity.velocity.multiply(velocityMultiplier)
         entity.addPassenger(player)
     }
 

@@ -1,2 +1,9 @@
-Glide: false
-GrappleBow: false
+glide:
+  enabled: false # default: false
+  giveOnJoin: false # default: false
+grappleBow:
+  enabled: false # default: false
+  giveOnJoin: false # default: false
+  velocityMultiplier: 1 # default: 1
+  stopsPlayerMovement: false # default: false
+  disableDismountWhenGrappling: true # default: true
