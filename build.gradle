@@ -1,7 +1,8 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.7.10'
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'dev.s7a.gradle.minecraft.server' version '1.2.0'
 }
 
 group = 'me.diligord'
@@ -22,6 +23,19 @@ repositories {
 dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.19.1-R0.1-SNAPSHOT'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+minecraftServerConfig {
+    jarUrl = "https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/131/downloads/paper-1.19.2-131.jar"
+}
+
+// Output to build/libs/shadow.jar
+shadowJar {
+   destinationDirectory = file("build/MinecraftServer/plugins")
+}
+
+jar {
+    destinationDirectory = file("build/MinecraftServer/plugins")
 }
 
 def targetJavaVersion = 17
